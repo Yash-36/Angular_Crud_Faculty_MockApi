@@ -1,0 +1,18 @@
+<div class="container mt-4 mb-3">
+    <div class="row g-4">
+        <div class="col-4" *ngFor="let f of data">
+            <div class="card h-100" style="width: 18rem;" >
+                <img [src]="f.FacultyImage" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-center">{{f.FacultyName}}</h5>
+                  <h6 class="card-title text-danger text-center">{{f.FacultyDesignation}}</h6>
+                  <hr/>
+                  <p class="text-center">{{f.FacultyEducationQualification}}</p>
+                  <hr/>
+                  <a routerLink="/faculty/{{f.id}}" class="btn btn-primary mx-3">View Details</a>
+                  <a (click)="delete(f.id)" class="btn btn-danger">Delete</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<form [formGroup] = "myForm" (ngSubmit) = "saveData()">
+  <div class="container mt-3">
+    <input type="text" placeholder="Faculty Id" class="form-control" formControlName = "id" />
+    <br />
+    <input type="text" placeholder="Faculty Name" class="form-control" formControlName = "FacultyName" />
+    <br />
+    <input type="text" placeholder="Image" class="form-control" formControlName = "FacultyImage" />
+    <br />
+    <input type="text" placeholder="Faculty Designation" class="form-control" formControlName = "FacultyDesignation"/>
+    <br />
+    <input type="text" placeholder="FacultyEducationQualification" class="form-control" formControlName = "FacultyEducationQualification" />
+    <br />
+    <input type="text" placeholder="FacultyExperience" class="form-control" formControlName = "FacultyExperience" />
+    <br />
+    <input type="text" placeholder="FacultyWorkingSince" class="form-control" formControlName = "FacultyWorkingSince" />
+    <br />
+    <button class="btn btn-primary me-3" *ngIf="id == -1">Add</button>
+    <button class="btn btn-warning me-3" *ngIf="id > 0">Edit</button>
+    <button class="btn btn-info" routerLink="/">Back</button>
+  </div>
+</form>
